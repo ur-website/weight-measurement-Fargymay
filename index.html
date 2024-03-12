@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Measurment</title>
+</head>
+<body>
+
+    <div class="photo">
+        <img src="جيماوي.png" alt="">
+    </div>
+    <table class="first">
+        <tr>
+            <td  class="bigger bigger3">الأول</td>
+            <td  class="bigger bigger3"> : الأسبـــــــــــــــــــوع</td>
+        </tr>
+        
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input1" oninput="calculateAverage()" /></td>
+            <td>السبــــــــــت</td>
+        </tr>
+
+        <tr>
+            <td> <input type="number" autocomplete="off" onblur="checkInput(this)" id="input2" oninput="calculateAverage()"/> </td>
+            <td>الأحــــــــــد</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input3" oninput="calculateAverage()"/></td>
+            <td>الإثنيــــــــــن</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input4" oninput="calculateAverage()"/></td>
+            <td>الثلاثــــــــــاء</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input5" oninput="calculateAverage()"/></td>
+            <td>الأربعــــــــــاء</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)"id="input6" oninput="calculateAverage()"/></td>
+            <td>الخميــــــــــس</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input7" oninput="calculateAverage()"/></td>
+            <td>الجمعــــــــــه</td>
+        </tr>
+
+        <tr>
+            <td  class="bigger2" id="averageCell"></td>
+            <td  class="bigger">متوســـــط الــــــــــوزن </td>
+        </tr>
+    </table>
+
+
+    <table class="second">
+        <tr>
+            <td  class="bigger bigger3">الثــــــــــاني</td>
+            <td  class="bigger bigger3"> : الأسبـــــــــــــــــــوع</td>
+        </tr>
+        
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input12" oninput="calculateAverage2()" /></td>
+            <td>السبــــــــــت</td>
+        </tr>
+
+        <tr>
+            <td> <input type="number" autocomplete="off" onblur="checkInput(this)" id="input22" oninput="calculateAverage2()"/> </td>
+            <td>الأحــــــــــد</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input32" oninput="calculateAverage2()"/></td>
+            <td>الإثنيــــــــــن</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input42" oninput="calculateAverage2()"/></td>
+            <td>الثلاثــــــــــاء</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input52" oninput="calculateAverage2()"/></td>
+            <td>الأربعــــــــــاء</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)"id="input62" oninput="calculateAverage2()"/></td>
+            <td>الخميــــــــــس</td>
+        </tr>
+
+        <tr>
+            <td><input type="number" autocomplete="off" onblur="checkInput(this)" id="input72" oninput="calculateAverage2()"/></td>
+            <td>الجمعــــــــــه</td>
+        </tr>
+
+        <tr>
+            <td  class="bigger2" id="averageCell2"></td>
+            <td  class="bigger">متوســـــط الــــــــــوزن </td>
+        </tr>
+
+        <tr>
+            <td class="bigger2"></td>
+            <td class="bigger">التطــــــــــور عن الأسبوع الماضي </td>
+        </tr>
+    </table>
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+        body{
+            background-color: #ED7D31;
+            font-family: "Tajawal", sans-serif;
+            color: #fff;
+            text-align: right;
+        }
+
+        .photo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #3A3838;
+        }
+    
+        table, th, td {
+            border: 2px solid black;    
+        }
+    
+        th, td {
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: center;
+            width: 50%;
+            height: 30px;
+        }
+
+        .bigger{
+            padding: 20px;
+            background-color: #7030A0;
+        }
+
+        .bigger2{
+            padding: 20px;
+        }
+
+        .bigger3{
+            color: #ED7D31;
+            font-weight: 600;
+        }
+
+        input{
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #151111;
+            font-size: 0.95rem;
+            color: #fff;
+            transition: 0.4s;
+            text-align: center;
+            font-size: 18px;
+            font-family: "Tajawal", sans-serif;
+        }
+
+        #averageCell,
+        #averageCell2{
+            color: #ED7D31;
+            font-weight: 600;
+            font-family: "Tajawal", sans-serif;
+            font-size: 25px;
+        }
+
+        .second{
+            margin-top: 50px;
+        }
+    </style>
+
+    <script>
+        function checkInput(input) {
+            // Remove border if input is not empty
+            if (input.value.trim() !== '') {
+                input.style.border = '2px solid transparent';
+            } else {
+                // Add border if input is empty
+                input.style.borderBottom = '1px solid #151111';
+            }
+        }
+
+        function calculateAverage() {
+                // Get all input elements
+                var inputs = document.querySelectorAll('.first input[type="number"]');
+
+                // Calculate the sum of the input values
+                var sum = 0;
+                var count = 0;
+                for (var i = 0; i < inputs.length; i++) {
+                    sum += parseFloat(inputs[i].value) || 0;
+                    count++;
+                }
+
+                // Calculate the average
+                var average = sum / count;
+
+                // Update the content of the average cell
+                document.getElementById('averageCell').textContent = '' + average.toFixed(2);
+            }
+
+            function calculateAverage2() {
+                    // Get all input elements
+                    var inputs = document.querySelectorAll('.second input[type="number"]');
+
+                    // Calculate the sum of the input values
+                    var sum = 0;
+                    for (var i = 0; i < inputs.length; i++) {
+                        sum += parseFloat(inputs[i].value) || 0;
+                    }
+
+                    // Calculate the average
+                    var average = sum / inputs.length;
+
+                    // Update the content of the average cell
+                    document.getElementById('averageCell2').textContent = '' + average.toFixed(2);
+                }
+    </script>
+</body>
+</html>
